@@ -1,0 +1,46 @@
+{
+  "name": "hello_app",
+  "version": "1.0.0",
+  "description": "HELLO异次元应用",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --win --x64"
+  },
+  "author": "serein",
+  "license": "MIT",
+  "build": {
+    "appId": "com.serein.hello_app",
+    "productName": "HELLO异次元",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "**/*"
+    ],
+    "win": {
+      "icon": "public/src/img/favicon.ico",
+      "signAndEditExecutable": false,
+      "target": [
+        "nsis"
+      ]
+    },
+    "mac": {
+      "icon": "public/src/img/logo.icns"
+    },
+    "linux": {
+      "icon": "public/src/img/logo4.png"
+    }
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "multer": "^1.4.5-lts.2",
+    "mysql2": "^3.6.0",
+    "python-shell": "^5.0.0",
+    "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "electron-builder": "^26.0.12"
+  }
+}

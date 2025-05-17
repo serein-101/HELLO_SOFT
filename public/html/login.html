@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' blob: file:; script-src 'self' 'unsafe-inline'; style-src 'self'; connect-src 'self' http:; img-src 'self' data: blob:; media-src 'self' blob: file:; font-src 'self' http://at.alicdn.com;">    <title>HELLO异次元</title> -->
+    <title>login</title>
+    <link rel="stylesheet" href="../css/config.css" />
+    <link rel="stylesheet" href="../css/login.css" />
+    <link rel="stylesheet" href="../css/iconfont.css" />
+  </head>
+  <body>
+    <form action="" method="post" id="loginForm" name="loginForm">
+      <h1>louie</h1>
+      <label for="username">
+        <p>用户名或邮箱地址</p>
+        <input type="text" name="username" id="username" />
+      </label>
+      <label for="password">
+        <p>密码</p>
+        <input type="password" name="password" id="password" />
+        <span id="show" class="iconfont icon-yanjing_xianshi_o"></span>
+      </label>
+      <button>
+        <label for="remeber"
+          ><input type="checkbox" name="remeber" id="remeber" />记住我</label
+        >
+        <label for="login"
+          ><input type="submit" name="login" id="login" value="登录"
+        /></label>
+      </button>
+      <hr />
+      <span
+        ><a href="regist.html" id="regist">注册</a><b></b
+        ><a href="" id="forget">忘记密码？</a></span
+      >
+    </form>
+  </body>
+  <script type="module" src="../js/login.js"></script>
+</html>

@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: #3f485d;
+    font-size: 16px;
+    /* font-family: 'myfonts','微软雅黑'; */
+}
+@font-face {
+    font-family: 'login';
+    src: url(../src/fonts/kinkee.ttf),
+    url(../src/fonts/Kinkee.woff),
+    url(../src/fonts/Kinkee.woff2)
+    ;
+}
+@font-face {
+    font-family: 'myfonts';
+    src: url(../src/fonts/DFKaiShu1B-GB.woff),
+    url(../src/fonts/DFKaiShu1B-GB.woff2);
+}
+
+/* body{
+    font-family: 'myfonts','微软雅黑' !important;
+} */
+li{
+    list-style: none;
+}
+
+select,input,textarea{
+    border: none;/*清除所有表单控件自带的边框*/
+}
+button{
+    cursor: pointer;/*所有按钮鼠标划过时都显示为手指*/
+}
+a{
+    text-decoration: none;/*清除所有a标签的下划线*/
+}
+body{
+    overflow-y: scroll;/*允许内容滚动*/
+}
+
+body::-webkit-scrollbar{
+    display: none;/*隐藏滚动条*/
+}
+

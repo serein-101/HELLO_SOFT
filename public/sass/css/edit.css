@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+form {
+  width: 80vw;
+  margin: 50px auto;
+  border: solid 1px #787288;
+  border-radius: 10px;
+}
+form textarea {
+  width: 100%;
+  height: 300px;
+  resize: none;
+  text-indent: 10px;
+  line-height: 30px;
+  font-size: 20px;
+  border-radius: 10px;
+  border: solid 1px #787288;
+  outline: none;
+  background-color: #cbfaf8;
+  color: rgb(142, 139, 139);
+}
+form textarea ::-webkit-input-placeholder {
+  color: white;
+}
+form textarea ::-moz-placeholder {
+  color: white;
+}
+form textarea :-ms-input-placeholder {
+  color: white;
+}
+form textarea ::-ms-input-placeholder {
+  color: white;
+}
+form textarea ::placeholder {
+  color: white;
+}
+form div {
+  padding: 5px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+form select {
+  outline: none;
+  margin: 0 20px;
+}
+form button {
+  width: 100px;
+  padding: 5px 10px;
+  background-color: #787288;
+  border-radius: 10px;
+}

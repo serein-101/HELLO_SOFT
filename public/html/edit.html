@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit</title>
+    <link rel="stylesheet" href="../css/config.css">
+    <link rel="stylesheet" href="../css/iconfont.css">
+    <link rel="stylesheet" href="../sass/css/edit.css"></link>
+</head>
+<body>
+    <!-- 
+        文本编辑模块
+        主要用于用户输入信息
+    -->
+        <form action="community.html" method="get">
+            <textarea name="" id="content" placeholder="说点什么吧！"></textarea>
+            <div>
+                <div class="left">
+                    <span>#</span>
+                    <span>@</span>
+                    <span>#</span>
+                </div>
+                <div class="right">
+                    <label for="">可见范围：</label>
+                    <select name="" id="see">
+                        <option value="">所有人</option>
+                        <option value="">仅关注</option>
+                        <option value="">仅自己</option>
+                    </select>
+                    <button>发表</button>
+                </div>
+            </div>
+        </form>
+</body>
+<script type="module" src="../js/edit.js"></script>
+</html>

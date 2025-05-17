@@ -1,0 +1,17 @@
+{
+    "platform": "win32",
+    "arch": "x64",
+    "out": "dist",
+    "ignore": [
+        function(filePath) {
+            const allowedFiles = ['test.exe', 'video.exe', 'paprika.pt'];
+            const baseName = require('path').basename(filePath);
+            return!allowedFiles.includes(baseName);
+        }
+    ],
+    "extraResource": [
+        "test.exe",
+        "video.exe",
+        "paprika.pt"
+    ]
+}

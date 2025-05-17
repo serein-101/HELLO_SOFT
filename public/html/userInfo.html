@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/config.css" />
+    <link rel="stylesheet" href="../css/iconfont.css" />
+    <link rel="stylesheet" href="../sass/css/userInfo.css" />
+  </head>
+  <body>
+    <form action="">
+      <main>
+        <div>
+          <label for="nickname"
+            ><span>昵称</span> <input type="text" id="nickname"
+          /></label>
+          <label for=""
+            ><span>性别</span>
+            <label for="gender">
+              <input type="radio" name="gender" value="男" id="" /> 男
+              <input type="radio" name="gender" value="女" id="" /> 女
+            </label>
+          </label>
+          <label for="birthday"
+            ><span>生日</span> <input type="date" id="birthday"
+          /></label>
+          <label for="introduce"
+            ><span>简介</span>
+            <textarea
+              maxlength="100"
+              placeholder="不超过100字"
+              name="introduce"
+              id="introduce"
+            ></textarea>
+          </label>
+        </div>
+        <div>
+          <label for="">
+            <span class="avatar">
+              <!-- <p>+</p> -->
+              <input type="file" accept="image/*" id="avatar" />
+              <img src="" alt="" />
+            </span>
+          </label>
+          <label for="signature"
+            ><span>签名</span>
+            <textarea
+              maxlength="50"
+              placeholder="不超过50字"
+              name="signature"
+              id="signature"
+            ></textarea>
+          </label>
+          <label for="region"
+            ><span>地区</span> <input type="text" id="region"
+          /></label>
+        </div>
+      </main>
+      <label for="save"><input type="submit" id="save" value="保存" /> </label>
+    </form>
+  </body>
+  <script type="module" src="../js/userInfo.js"></script>
+</html>

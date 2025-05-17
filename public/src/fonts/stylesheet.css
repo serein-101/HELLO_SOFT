@@ -1,0 +1,18 @@
+@font-face {
+    font-family: 'Candice';
+    src: url('Candice.woff2') format('woff2'),
+        url('Candice.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'KaiTi_GB2312';
+    src: url('KaiTi_GB2312.woff2') format('woff2'),
+        url('KaiTi_GB2312.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

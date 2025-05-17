@@ -1,0 +1,47 @@
+header{
+    width: 90vw;
+    height: 100px;
+    margin: 10px auto;
+}
+header button{
+    font-family: 'myfonts';
+    width: 120px;
+    height: 60px;
+    border: none;
+    background-color: transparent;
+    margin-right: 20px;
+    border-bottom: solid 2px transparent;
+}
+section{
+    position: relative;
+}
+main {
+    position: absolute;
+    width: 90vw;
+    top: 20px;
+    left: 5vw;
+    /* margin: 20px auto; */
+    display: none;
+}
+main ul{
+    width: 100%;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+ul li{
+    width: 24%;
+    height: 200px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background-color: aqua;
+}
+
+.location{
+    display: block;
+}
+
+.clicked{
+    border-bottom-color: rgb(248, 110, 110);
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <!-- 修改Content-Security-Policy，允许加载blob资源 -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' blob: file:; script-src 'self' 'unsafe-inline'; style-src 'self'; connect-src 'self' http:; img-src 'self' data: blob:; media-src 'self' blob: file:; font-src 'self' http://at.alicdn.com;">    <title>HELLO异次元</title>
+    <link rel="stylesheet" href="index.css">
+    <!-- <link rel="stylesheet" href="public/css/style.css"> -->
+    <link rel="stylesheet" href="public/css/iconfont.css">
+</head>
+<body>
+    <aside>
+        <div class="app_information">
+            <img src="public/src/img/logo4.png" alt="图标好像飞走啦！">
+            <h1>HELLO&nbsp;&nbsp;异次元</h1>
+        </div>
+        <hr>
+        <div class="btn">
+            <button id="btn_to_home" class="clicked">
+                <span class="iconfont icon-shouye"></span>
+                主页
+            </button>
+            <button id="btn_to_photo">
+                <span class="iconfont icon-chuangzuozhongxin"></span>
+                创作
+            </button>
+            <button id="btn_to_community">
+                <span class="iconfont icon-shequ-jihuo_"></span>
+                社区
+            </button>
+            <!-- <button id="btn_to_heart">
+                <span class="iconfont icon-shoucang"></span>
+                收藏
+            </button> -->
+            <button id="btn_to_album">
+                <span class="iconfont icon-xiangce"></span>
+                相册
+            </button>
+            <button id="btn_to_book">
+                <span class="iconfont icon-guanzhu"></span>
+                关注
+            </button>
+            <button id="btn_to_message">
+                <span class="iconfont icon-pinglun"></span>
+                留言
+            </button>
+            <button id="btn_to_setting">
+                <span class="iconfont icon-shezhi"></span>
+                设置
+            </button>
+        </div>
+    </aside>
+    <div class="content" id="content">
+        <header>
+            <span class="iconfont icon-a-ziyuan558" id="goBack" data-title="回退"></span>
+            <section>
+                <span class="iconfont icon-sousuo" id="searchIcon" data-title="搜索"></span>
+                <input type="text" name="" id="search" placeholder="输入你想找的东西吧！">
+            </section>
+            <span class="iconfont icon-yonghu1" id="userIcon" data-title="Serein"></a></span>
+            <span class="iconfont icon-xialacaidan" data-title="更多"></span>
+            <span class="iconfont icon-pifuzhuti" id="skinIcon" data-title="皮肤"></span>
+            <span class="iconfont icon-24gl-minimization" id="minimize" data-title="最小化"></span>
+            <span class="iconfont icon-zuidahua" id="maximize" data-title="最大化"></span>
+            <span class="iconfont icon-guanbi" id="close" data-title="关闭"></span>
+        </header>
+        <p id="hitokoto">
+            <a href="#" id="hitokoto_text">文字飞走啦！请检查网络环境</a>
+          </p>
+        <div class="page">
+            <iframe src="public/html/home.html" frameborder="0" id="home-content" class="location"></iframe>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

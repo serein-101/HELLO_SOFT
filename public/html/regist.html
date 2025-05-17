@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>regist</title>
+    <link rel="stylesheet" href="../css/login.css" />
+    <link rel="stylesheet" href="../css/config.css" />
+    <link rel="stylesheet" href="../css/iconfont.css" />
+  </head>
+  <body>
+    <form
+      action="../html/login.html"
+      method="post"
+      id="registForm"
+      name="registForm"
+    >
+      <h1>louie</h1>
+      <label for="username">
+        <p>昵称</p>
+        <input type="text" name="nickname" id="nickname" />
+      </label>
+      <label for="password">
+        <p>用户名或邮箱地址</p>
+        <input
+          type="text"
+          name="username"
+          id="username"
+          required
+          autocomplete="off"
+        />
+      </label>
+      <label for="password">
+        <p>密码</p>
+        <input type="password" name="password" id="password" required />
+        <span class="iconfont icon-yanjing_xianshi_o"></span>
+      </label>
+      <button>
+        <label for="regist"
+          ><input type="submit" name="regist" id="regist" value="注册"
+        /></label>
+      </button>
+      <hr />
+      <span><a href="login.html" id="retLogin">已有帐号？返回登录</a></span>
+    </form>
+  </body>
+  <script type="module" src="../js/regist.js"></script>
+</html>

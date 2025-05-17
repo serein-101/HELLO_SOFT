@@ -1,0 +1,187 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: gray;
+}
+h6{
+    width: 80%;
+    margin: 0 auto;
+    font-size: 30px;
+}
+nav{
+    width: 80%;
+    height: 260px;
+    margin: 30px auto 0;
+}
+nav ul li img{
+    width: 100%;
+    height:100%;
+    border-radius: 10px;
+}
+nav ul{
+    width: 100%;
+    height: 160px;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+nav li{
+    width: 15%;
+    height: 100%;
+    border-radius: 10px;
+    margin: 0 10px;
+}
+nav a{
+    width: 80px;
+    height: 30px;
+    display: block;
+    background-color: gray;
+    border: solid 1px grey;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 30px;
+    margin: auto;
+    color: white;
+}
+.content{
+    width: 80%;
+    max-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 30px auto 0;
+    border: solid 1px grey;
+    border-radius: 10px;
+}
+.content img{
+    max-height: 300px;
+}
+h2{
+    width: 80%;
+    font-size: 20px;
+    line-height: 1;
+    margin: 10px auto;
+}
+.section{
+    width: 40%;
+    height: 20%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0 20px 0;
+}
+.section button{
+    width: 80px;
+    height: 30px;
+    border: none;
+    background-color: aquamarine;
+    border-radius: 10px;
+    margin: 10px;
+}
+.section label{
+    width: 160px;
+    height: 160px;
+    display: block;
+    margin: 0 auto;
+    border: solid 2px gray;
+    margin-bottom: 20px;
+}
+.section label span{
+    display: block;
+    height: 120px;
+    width: 100%;
+    font-size: 16px;
+    line-height: 160px;
+    padding-top: 40px;
+    position: relative;
+    text-align: center;
+}
+.section label span::after,
+.section label span::before{
+    content: '';
+    width: 30%;
+    height: 2px;
+    background-color: #777;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform-origin: center;
+    transform: translate(-50%, -50%);
+}
+.section label span::after{
+    transform: translateX(-50%) rotate(90deg);
+}
+.section input{
+    width: 60%;
+    height: 100%;
+    display: none;
+    margin: 10px;
+}
+.section input::file-selector-button{
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.section img, .section video{
+    max-width: 100%;
+    max-height: 300px;
+}
+
+#progress-bar {
+    width: 80vw;
+    height: 200px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    position: fixed;
+    top: 50px;
+    left: 100px;
+    display: none;
+    text-indent: 5px;
+    z-index: 999;
+}
+
+#progress-bar h4{
+    font-size: 20px;
+    color: #787988;
+    line-height: 40px;
+    text-indent: 5px;
+}
+#progress-bar .processing{
+    margin-top: 10px;
+    font-size: 16px;
+    color: grey;
+}
+
+#progress {
+    height: 20px;
+    background-color: #007BFF;
+    width: 0;
+    color: #f0f0f0;
+    font-size: 14px;
+    text-align: center;
+}
+
+.result-section{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.result-section div{
+    width: 50%;
+}
+
+main{
+    width: 80%;
+    display: flex;
+    height: 30px;
+    margin: 20px auto;
+}
+
+main label{
+    display: flex;
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 修改CSP策略（约第7行） -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self' blob: file:; script-src 'self' 'unsafe-inline'; style-src 'self'; connect-src 'self' http: ws://8.130.151.193:3001 ws://localhost:3001/ ws://8.130.151.193:3001/; img-src 'self' data: blob: http://8.130.151.193:3001; media-src 'self' blob: file: data: http://8.130.151.193:3001; font-src 'self' http://at.alicdn.com;"
+    />
+    <title>图片转换</title>
+    <link rel="stylesheet" href="../css/config.css" />
+    <link rel="stylesheet" href="../css/transform.css" />
+  </head>
+  <body>
+    <h6>创作</h6>
+    <nav>
+      <h1>风格选择</h1>
+      <ul>
+        <li>
+          <label for="hayao">
+            <p><input type="checkbox" id="hayao" />宫崎骏</p>
+            <img src="../src/img/宫崎骏.jpg" alt="图片飞走啦！！！" />
+          </label>
+        </li>
+        <li>
+          <label for="shinkai">
+            <p><input type="checkbox" id="shinkai" />新海诚</p>
+            <img src="../src/img/新海诚.jpg" alt="图片飞走啦！！！" />
+          </label>
+        </li>
+        <li>
+          <label for="disney">
+            <p><input type="checkbox" id="disney" />迪士尼</p>
+            <img src="../src/img/diseny.jpg" alt="图片飞走啦！！！" />
+          </label>
+        </li>
+      </ul>
+    </nav>
+    <h2>图片转换</h2>
+    <div id="progress-bar">
+      <h4>正在处理中，请耐心等待...</h4>
+      <span id="processing"></span>
+      <div id="progress"></div>
+    </div>
+    <div class="content">
+      <div id="photo-input-section" class="section">
+        <label for="photo-file">
+          <span>点击上传图片</span>
+          <input type="file" id="photo-file" accept="image/*" />
+        </label>
+        <button id="upload">上传图片</button>
+        <button id="exchange">转换图片</button>
+      </div>
+      <div class="result-section">
+        <div id="uploaded-image"></div>
+        <div id="converted-image"></div>
+      </div>
+    </div>
+    <h2>视频转换</h2>
+    <main>
+      <span>帧率选择：</span>
+      <label for="fps" id="selectFPS">
+        <p>
+          <input type="radio" name="fps" value="default_fps" checked /> 原始帧率
+        </p>
+        <p><input type="radio" name="fps" value="24" /> 24fps (电影)</p>
+        <p><input type="radio" name="fps" value="30" /> 30fps (标准)</p>
+        <p><input type="radio" name="fps" value="60" /> 60fps (流畅)</p>
+      </label>
+    </main>
+    <div class="content">
+      <div id="video-input-section" class="section">
+        <label for="video-file">
+          <span>点击上传视频</span>
+          <input type="file" id="video-file" accept="video/*" />
+        </label>
+        <button id="uploadVideo">上传视频</button>
+        <button id="convertedVideo">转换视频</button>
+      </div>
+      <div class="result-section">
+        <div id="uploaded-video"></div>
+        <div id="converted-video"></div>
+      </div>
+    </div>
+  </body>
+  <script src="../js/transform.js"></script>
+</html>

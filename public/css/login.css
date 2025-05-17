@@ -1,0 +1,105 @@
+
+@font-face {
+    font-family: 'login';
+    src: url(../src/fonts/kinkee.ttf),
+    url(../src/fonts/Kinkee.woff),
+    url(../src/fonts/Kinkee.woff2)
+    ;
+}
+@font-face {
+    font-family: 'myfonts';
+    src: 
+    /* url(../src/fonts/GB5KM1B.TTF), */
+    url(../src/fonts/DFKaiShu1B-GB.woff),
+    url(../src/fonts/DFKaiShu1B-GB.woff2);
+    font-display: swap;
+}
+
+body{
+    background: url(../src/img/sansan2.jpg) no-repeat center center / cover;
+}
+
+form{
+    font-family: 'myfonts','微软雅黑';
+    width: 30vw;
+    height: 80vh;
+    margin: 50px auto;
+    text-align: center;
+    background-color: rgba(198,198,198,.8);
+    border-radius: 20px;
+}
+form h1{
+    font-size: 50px;
+    font-family: 'login';
+}
+form label{
+    width: 80%;
+    height: 50px;
+    margin: 10px auto;
+    display: block;
+    text-align: left;
+    position: relative;
+}
+
+form label input{
+    font-family: '微软雅黑';
+    border: solid 2px gray;
+    outline: none;
+    height: 30px;
+    font-size: 20px;
+    text-indent: 10px;
+    line-height: 30px;
+    width: 100%;
+    border-radius: 10px;
+    /* cursor: pointer; */
+}
+form label input[type="checkbox"]{
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+    border-radius: 50%;
+    background-color: white;
+    color: white;
+    text-align: center;
+    text-indent: 0;
+    /*取消默认样式*/
+    appearance:none;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    -ms-appearance:none;
+    -o-appearance:none;
+}
+input[type="checkbox"]:checked{
+    background-color: skyblue;
+}
+input[type="checkbox"]:after{
+    content: '✔';
+}
+form span{
+    text-align: left;
+    display: block;
+    margin-top: 10px;
+    font-size: 20px;
+    text-indent: 30px;
+}
+span b{
+    display: inline-block;
+    width: 2px;
+    height: 20px;
+    background-color: black;
+    vertical-align: middle;
+    margin: 0 10px;
+}
+form button{
+    width: 100%;
+    border: none;
+    background: transparent;
+}
+
+#show{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    font-size: 26px;
+    transform: translateY(-45%);
+}
