@@ -36,7 +36,7 @@ section{
 section .card{
     width: 90vw;
     background-color: white;
-    margin: 0 auto;
+    margin: 20px auto;
     border: solid 1px rgb(219, 217, 217);
     border-radius: 10px;
 }
@@ -83,6 +83,12 @@ section .card main img{
     height: 100vh;
 }
 
+section .card main article{
+    width: 80%;
+    margin: 10px auto;
+}
+
+
 
 section div footer{
     width: 80vw;
@@ -91,6 +97,10 @@ section div footer{
     display: flex;
     color: rgb(161, 159, 159);
     justify-content: space-between;
+}
+
+section div footer figure:first-of-type{
+    font-size: 12px;
 }
 
 section div footer figure a{
@@ -165,4 +175,129 @@ aside header button{
     font-size: 20px;
     color: #3f485d;
     background-color: transparent;
+}
+
+
+/*emotion*/
+.emoji-panel {
+  position: absolute;
+  top: 20%;
+  right: 0;
+  width: 100%;
+  max-width: 400px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  padding: 16px;
+  display: none;
+  z-index: 333;
+}
+
+.emoji-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.emoji-categories {
+  display: flex;
+  gap: 8px;
+}
+
+.category {
+  font-size: 20px;
+  padding: 4px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.category.active {
+  background: #f0f0f0;
+}
+
+.emoji-container {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+}
+
+.emoji-item {
+  font-size: 24px;
+  padding: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.emoji-item:hover {
+  background: #f0f0f0;
+}
+
+/* 显示动画 */
+.emoji-panel.show {
+  display: block;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* 评论区整体样式 */
+.comment {
+  padding-left: 1.25rem; /* 左侧缩进 */
+  border-left: 2px solid #f0f0f0; /* 左侧分隔线 */
+}
+
+h6{
+    width: 90%;
+    margin: 10px auto;
+    font-weight: normal;
+}
+
+/* 评论用户信息 */
+.comment-user {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.comment-user img {
+  width: 1.65rem !important; /* 头像尺寸缩小 */
+  height: 1.65rem !important;
+  border-radius: 50%;
+}
+
+.comment-user a {
+    text-align: left;
+    width: 100% !important;
+  font-size: 0.7rem !important; /* 昵称字体缩小 */
+  color: #333;
+  font-weight: 500;
+  margin-left: 0 !important;
+}
+
+/* 评论内容 */
+.comment-content {
+  font-size: 0.975rem; /* 内容字体缩小 */
+  color: #999; /* 颜色变淡 */
+  line-height: 1.5;
+  height: auto !important;
+}
+
+
+/* 评论时间 */
+.comment-time {
+  font-size: 0.75rem;
+  color: #999;
+  text-align: right;
+  height: auto !important;
+}
+
+/* 动态内容与评论区的间隔 */
+.card main {
+  margin: 1.25rem 0;
 }

@@ -1,128 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' blob: file:; script-src 'self' 'unsafe-inline'; style-src 'self'; connect-src 'self' http:; img-src 'self' data: blob:; media-src 'self' blob: file:; font-src 'self' http://at.alicdn.com;">    <title>HELLO异次元</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self' blob: file:; script-src 'self' 'unsafe-inline'; style-src 'self'; connect-src 'self' http:; img-src 'self' data: blob:; media-src 'self' blob: file:; font-src 'self' http://at.alicdn.com;"
+    />
+    <title>HELLO异次元</title>
     <title>设置</title>
-    <link rel="stylesheet" href="../css/config.css">
-    <link rel="stylesheet" href="../css/setting.css">
-    <link rel="stylesheet" href="../css/iconfont.css">
-</head>
-<body>
+    <link rel="stylesheet" href="../css/config.css" />
+    <link rel="stylesheet" href="../css/setting.css" />
+    <link rel="stylesheet" href="../css/iconfont.css" />
+  </head>
+  <body>
     <header>
-        <ul>
-            <li class="active">常规</li>
-            <li>账号</li>
-            <li>隐私</li>
-            <li>关于</li>
-            <li>更多</li>
-        </ul>
+      <ul>
+        <li class="active">常规</li>
+        <li>账号</li>
+        <li>隐私</li>
+        <li>关于</li>
+        <li>更多</li>
+      </ul>
     </header>
     <section>
-        <ul>
-            <li>
-                <aside>
-                    <h1>常规</h1>
-                </aside>
-                <div>
-                    <nav>
-                        <select name="FontSet" id="FontSet">
-                            <option value="楷体GB_2312">楷体GB_2312</option>
-                            <option value="微软雅黑">微软雅黑</option>
-                            <option value="黑体">黑体</option>
-                            <option value="宋体">宋体</option>
-                        </select>
-                        <span>字体设置</span>
-                        <select name="FontSize" id="fontSize">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3" selected>3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                        </select>
-                        <span>字体大小</span>
-                    </nav>
-                    <label for="sentence"><input type="checkbox" id="sentence" checked>&nbsp;一言</label>
-                </div>
-            </li>
-            <li>
-                <aside>
-                    <h1>帐号</h1>
-                </aside>
-                <div>
-                    <p>
-                        <img src="../src/img/weixin.png" alt="">
-                        <img src="../src/img/weibo.png" alt="">
-                        <img src="../src/img/qq.png" alt="">
-                        <a href="">绑定账号>></a>
-                    </p>
-                    <h5 id="editUserInfo">修改个人信息</h5>
-                    <h4><input type="url" name="" id="HomeLink" placeholder="你的主页：www.senora.fun"></h4>
-                </div>
-            </li>
-            <li>
-                <aside>
-                    <h1>隐私</h1>
-                </aside>
-                <div>
-                    <main class="private">
-                        <p>
-                            <b>谁可以向我留言？</b>
-                            <label for="any"><input type="checkbox" name="" checked id="any">所有人</label>
-                            <label for="heart"><input type="checkbox" name="" id="heart">仅关注我的人</label>
-                        </p>
-                        <p>
-                            <b>个性化服务</b>
-                            <label for="open"><input type="checkbox" name="" checked id="open">开启</label>
-                            <label for="close"><input type="checkbox" name="" id="close">关闭</label>
-                        </p>
-                        <p>
-                            <b>谁可以看我的相册？</b>
-                            <label for="every"><input type="checkbox" name="" checked id="every">所有人可见</label>
-                            <label for="only"><input type="checkbox" name="" id="only">仅关注的人</label>
-                            <label for="myself"><input type="checkbox" name="" id="myself">仅自己可见</label>
-                        </p>
-                    </main>
-                </div>
-            </li>
-            <li>
-                <aside>
-                    <h1>关于</h1>
-                </aside>
-                <div>
-                    <article>
-                        <p>HELLO异次元</p>
-                        <p>Author:  <a href="http://www.senora.fun/">@Serein</a></p>
-                        <p>版本： Version1.0</p>
-                        <label for="update"><input type="checkbox" checked id="update">&nbsp;检查更新</label>
-                        <label for="call"><input type="checkbox" checked id="call">&nbsp;有新版本时提醒我</label>
-                        <h3>下载其他客户端
-                            <span><img src="../src/img/android.png" alt="">And版</span>
-                            <span><img src="../src/img/iphone.png" alt="">Mac版</span>
-                            <span><img src="../src/img/windows.png" alt="">Win版</span>
-                        </h3>
-                    </article>
-                </div>
-            </li>
-            <li>
-                <aside>
-                    <h1>更多</h1>
-                </aside>
-                <div>
-                    <form action="post">
-                        <h2>您的建议</h2>
-                        <textarea name="" id="suggestion" placeholder="输入你想对作者说的话："></textarea>
-                        <h2>联系方式</h2>
-                        <input type="text" placeholder="邮箱：xxx@qq.com">
-                        <button>提交</button>
-                    </form>
-                </div>
-            </li>
-        </ul>
+      <ul>
+        <li>
+          <aside>
+            <h1>常规</h1>
+          </aside>
+          <div>
+            <nav>
+              <select name="FontSet" id="FontSet">
+                <option value="楷体GB_2312">楷体GB_2312</option>
+                <option value="微软雅黑">微软雅黑</option>
+                <option value="黑体">黑体</option>
+                <option value="宋体">宋体</option>
+              </select>
+              <span>字体设置</span>
+              <select name="FontSize" id="fontSize">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3" selected>3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+              </select>
+              <span>字体大小</span>
+            </nav>
+            <label for="sentence"
+              ><input type="checkbox" id="sentence" checked />&nbsp;一言</label
+            >
+          </div>
+        </li>
+        <li>
+          <aside>
+            <h1>帐号</h1>
+          </aside>
+          <div>
+            <p>
+              <img src="../src/img/weixin.png" alt="" />
+              <img src="../src/img/weibo.png" alt="" />
+              <img src="../src/img/qq.png" alt="" />
+              <a href="">绑定账号>></a>
+            </p>
+            <h5 id="editUserInfo">修改个人信息</h5>
+            <h4>
+              <input
+                type="url"
+                name=""
+                id="HomeLink"
+                placeholder="你的主页：www.senora.fun"
+              />
+            </h4>
+          </div>
+        </li>
+        <li>
+          <aside>
+            <h1>隐私</h1>
+          </aside>
+          <div>
+            <main class="private">
+              <p>
+                <b>谁可以向我留言？</b>
+                <label for="any"
+                  ><input
+                    type="checkbox"
+                    name=""
+                    checked
+                    id="any"
+                  />所有人</label
+                >
+                <label for="heart"
+                  ><input
+                    type="checkbox"
+                    name=""
+                    id="heart"
+                  />仅关注我的人</label
+                >
+              </p>
+              <p>
+                <b>个性化服务</b>
+                <label for="open"
+                  ><input
+                    type="checkbox"
+                    name=""
+                    checked
+                    id="open"
+                  />开启</label
+                >
+                <label for="close"
+                  ><input type="checkbox" name="" id="close" />关闭</label
+                >
+              </p>
+              <p>
+                <b>谁可以看我的相册？</b>
+                <label for="every"
+                  ><input
+                    type="checkbox"
+                    name=""
+                    checked
+                    id="every"
+                  />所有人可见</label
+                >
+                <label for="only"
+                  ><input type="checkbox" name="" id="only" />仅关注的人</label
+                >
+                <label for="myself"
+                  ><input
+                    type="checkbox"
+                    name=""
+                    id="myself"
+                  />仅自己可见</label
+                >
+              </p>
+            </main>
+          </div>
+        </li>
+        <li>
+          <aside>
+            <h1>关于</h1>
+          </aside>
+          <div>
+            <article>
+              <p>HELLO异次元</p>
+              <p>Author: <a href="http://www.senora.fun/">@Serein</a></p>
+              <p>版本： Version1.0</p>
+              <label for="update"
+                ><input
+                  type="checkbox"
+                  checked
+                  id="update"
+                />&nbsp;检查更新</label
+              >
+              <label for="call"
+                ><input
+                  type="checkbox"
+                  checked
+                  id="call"
+                />&nbsp;有新版本时提醒我</label
+              >
+              <h3>
+                下载其他客户端
+                <span><img src="../src/img/android.png" alt="" />And版</span>
+                <span><img src="../src/img/iphone.png" alt="" />Mac版</span>
+                <span><img src="../src/img/windows.png" alt="" />Win版</span>
+              </h3>
+            </article>
+          </div>
+        </li>
+        <li>
+          <aside>
+            <h1>更多</h1>
+          </aside>
+          <div>
+            <form action="post">
+              <h2>您的建议</h2>
+              <textarea
+                name=""
+                id="suggestion"
+                placeholder="输入你想对作者说的话："
+              ></textarea>
+              <h2>联系方式</h2>
+              <input type="text" placeholder="邮箱：xxx@qq.com" />
+              <button>提交</button>
+            </form>
+          </div>
+        </li>
+      </ul>
     </section>
     <strong>返回顶部</strong>
-</body>
-<script src="../js/setting.js"></script>
+  </body>
+  <script src="../js/setting.js"></script>
+  <!-- <script src="/global.js"></script> -->
 </html>

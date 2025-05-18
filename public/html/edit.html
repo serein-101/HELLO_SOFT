@@ -7,31 +7,175 @@
     <link rel="stylesheet" href="../css/config.css">
     <link rel="stylesheet" href="../css/iconfont.css">
     <link rel="stylesheet" href="../sass/css/edit.css"></link>
+<script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#4F46E5',
+                        secondary: '#10B981',
+                        neutral: '#F3F4F6',
+                        dark: '#1F2937'
+                    },
+                    fontFamily: {
+                        inter: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .emoji-btn {
+                @apply text-gray-500 hover:text-primary transition-colors cursor-pointer p-2 rounded-full hover:bg-gray-100;
+            }
+            .emoji-item {
+                @apply text-2xl p-2 hover:bg-gray-100 rounded cursor-pointer transition-all;
+            }
+            .emoji-panel {
+                @apply absolute bg-white rounded-lg shadow-lg p-2 w-64 z-10 transition-all duration-300 ease-in-out transform origin-top;
+            }
+        }
+    </style>
 </head>
-<body>
-    <!-- 
-        文本编辑模块
-        主要用于用户输入信息
-    -->
-        <form action="community.html" method="get">
-            <textarea name="" id="content" placeholder="说点什么吧！"></textarea>
-            <div>
-                <div class="left">
-                    <span>#</span>
-                    <span>@</span>
-                    <span>#</span>
+<body class="bg-gray-50 font-inter">
+    <!-- 文本编辑模块 -->
+    <div class="max-w-3xl mx-auto p-4">
+        <form action="community.html" method="get" class="bg-white rounded-xl shadow-sm p-4 mt-8">
+            <div class="relative">
+                <textarea id="content" placeholder="说点什么吧！" class="w-full h-40 p-4 border border-gray-200 rounded-lg focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all resize-none"></textarea>
+                
+                <!-- 表情包按钮 -->
+                <span id="emojiBtn" class="emoji-btn absolute -bottom-10 left-2">
+                    <i class="fa-regular fa-face-smile"></i>
+                </span>
+                
+                <!-- 表情包面板 (默认隐藏) -->
+                <div id="emojiPanel" class="emoji-panel hidden grid grid-cols-8 gap-1 -bottom-[220px] left-2">
+                    <div class="emoji-item" data-emoji="😀">😀</div>
+                    <div class="emoji-item" data-emoji="😂">😂</div>
+                    <div class="emoji-item" data-emoji="😊">😊</div>
+                    <div class="emoji-item" data-emoji="😍">😍</div>
+                    <div class="emoji-item" data-emoji="🤔">🤔</div>
+                    <div class="emoji-item" data-emoji="👍">👍</div>
+                    <div class="emoji-item" data-emoji="❤️">❤️</div>
+                    <div class="emoji-item" data-emoji="👏">👏</div>
+                    <div class="emoji-item" data-emoji="🎉">🎉</div>
+                    <div class="emoji-item" data-emoji="🚀">🚀</div>
+                    <div class="emoji-item" data-emoji="🐱">🐱</div>
+                    <div class="emoji-item" data-emoji="🌍">🌍</div>
+                    <div class="emoji-item" data-emoji="🍔">🍔</div>
+                    <div class="emoji-item" data-emoji="🎮">🎮</div>
+                    <div class="emoji-item" data-emoji="📚">📚</div>
+                    <div class="emoji-item" data-emoji="💡">💡</div>
+                    <div class="emoji-item" data-emoji="✨">✨</div>
+                    <div class="emoji-item" data-emoji="🔥">🔥</div>
+                    <div class="emoji-item" data-emoji="💯">💯</div>
+                    <div class="emoji-item" data-emoji="🎯">🎯</div>
+                    <div class="emoji-item" data-emoji="🌟">🌟</div>
+                    <div class="emoji-item" data-emoji="💻">💻</div>
+                    <div class="emoji-item" data-emoji="🎨">🎨</div>
+                    <div class="emoji-item" data-emoji="🎵">🎵</div>
+                    <div class="emoji-item" data-emoji="💬">💬</div>
+                    <div class="emoji-item" data-emoji="💭">💭</div>
+                    <div class="emoji-item" data-emoji="👀">👀</div>
+                    <div class="emoji-item" data-emoji="🎁">🎁</div>
+                    <div class="emoji-item" data-emoji="🏆">🏆</div>
+                    <div class="emoji-item" data-emoji="💪">💪</div>
+                    <div class="emoji-item" data-emoji="😎">😎</div>
                 </div>
-                <div class="right">
-                    <label for="">可见范围：</label>
-                    <select name="" id="see">
-                        <option value="">所有人</option>
-                        <option value="">仅关注</option>
-                        <option value="">仅自己</option>
+            </div>
+            
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mt-12 space-y-4 sm:space-y-0">
+                <div class="flex space-x-2">
+                    <span class="text-gray-500 hover:text-primary transition-colors cursor-pointer p-2 rounded-full hover:bg-gray-100">
+                        <i class="fa-solid fa-hashtag"></i>
+                    </span>
+                    <span class="text-gray-500 hover:text-primary transition-colors cursor-pointer p-2 rounded-full hover:bg-gray-100">
+                        <i class="fa-solid fa-at"></i>
+                    </span>
+                    <span class="text-gray-500 hover:text-primary transition-colors cursor-pointer p-2 rounded-full hover:bg-gray-100">
+                        <i class="fa-solid fa-image"></i>
+                    </span>
+                </div>
+                
+                <div class="flex items-center space-x-4">
+                    <label for="see" class="text-gray-700">可见范围：</label>
+                    <select id="see" class="border border-gray-200 rounded-lg p-2 focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all">
+                        <option value="everyone">所有人</option>
+                        <option value="followers">仅关注</option>
+                        <option value="onlyme">仅自己</option>
                     </select>
-                    <button>发表</button>
+                    <button type="submit" class="bg-primary hover:bg-primary/90 text-white px-6 py-2 rounded-lg transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+                        发表
+                    </button>
                 </div>
             </div>
         </form>
-</body>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const contentTextarea = document.getElementById('content');
+            const emojiBtn = document.getElementById('emojiBtn');
+            const emojiPanel = document.getElementById('emojiPanel');
+            const emojiItems = document.querySelectorAll('.emoji-item');
+            
+            // 点击表情包按钮时显示/隐藏表情包面板
+            emojiBtn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                emojiPanel.classList.toggle('hidden');
+                
+                // 添加动画效果
+                if (!emojiPanel.classList.contains('hidden')) {
+                    emojiPanel.classList.add('opacity-0', 'scale-95');
+                    setTimeout(() => {
+                        emojiPanel.classList.remove('opacity-0', 'scale-95');
+                    }, 10);
+                }
+            });
+            
+            // 点击表情包时将表情插入到文本框中
+            emojiItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    const emoji = this.getAttribute('data-emoji');
+                    insertEmoji(emoji);
+                    emojiPanel.classList.add('opacity-0', 'scale-95');
+                    setTimeout(() => {
+                        emojiPanel.classList.add('hidden');
+                        emojiPanel.classList.remove('opacity-0', 'scale-95');
+                    }, 200);
+                });
+            });
+            
+            // 点击页面其他地方时关闭表情包面板
+            document.addEventListener('click', function(e) {
+                if (!emojiPanel.contains(e.target) && e.target !== emojiBtn) {
+                    emojiPanel.classList.add('hidden');
+                }
+            });
+            
+            // 插入表情到文本框的当前光标位置
+            function insertEmoji(emoji) {
+                const start = contentTextarea.selectionStart;
+                const end = contentTextarea.selectionEnd;
+                const text = contentTextarea.value;
+                
+                // 插入表情
+                contentTextarea.value = text.substring(0, start) + emoji + text.substring(end);
+                
+                // 移动光标到插入后的位置
+                contentTextarea.selectionStart = contentTextarea.selectionEnd = start + emoji.length;
+                
+                // 触发文本框的input事件
+                const event = new Event('input', { bubbles: true });
+                contentTextarea.dispatchEvent(event);
+            }
+        });
+    </script>
 <script type="module" src="../js/edit.js"></script>
 </html>

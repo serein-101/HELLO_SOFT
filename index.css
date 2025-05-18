@@ -3,6 +3,24 @@
     padding: 0;
 }
 
+.dark-mode-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: none;
+    background: var(--primary-color);
+    color: white;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.dark-mode-toggle:hover {
+    transform: scale(1.05);
+}
+
 @font-face {
     font-family: 'logo';
     src: url(/public/src/fonts/GB5KM1B.TTF)format('truetype'),
@@ -76,6 +94,7 @@ aside button:first-of-type{
 aside{
     width: 20%;
     position: relative;
+    border-right: solid 1px #ccc;
     transform-origin: top left;
     background-color: rgba(10, 10, 10, 0.1);
 }
@@ -138,9 +157,8 @@ aside .btn::-webkit-scrollbar-thumb:hover{
     display: none;
 }
 .content header{
-    margin: 0 auto;
-    /* width: 500px; */
-    width: 70vw;
+    margin: 0;
+    width: 77vw;
     height: 10%;
     font-size: 20px;
     display: flex;
@@ -320,11 +338,11 @@ iframe::-webkit-scrollbar{
 */
 
 #hitokoto{
-    width: 60%;
-    margin: 20px auto;
+    width: 100%;
+    line-height: 15vh;
+    height: 15vh;
     text-align: center;
     background-color: rgba(255,255,255,.7);
-    border-radius: 10px;
 }
 #hitokoto a{
     text-decoration: none;

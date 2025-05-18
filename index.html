@@ -3,10 +3,8 @@
 
 <head>
     <meta charset="UTF-8" />
-    <!-- 修改Content-Security-Policy，允许加载blob资源 -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' blob: file:; script-src 'self' 'unsafe-inline'; style-src 'self'; connect-src 'self' http:; img-src 'self' data: blob:; media-src 'self' blob: file:; font-src 'self' http://at.alicdn.com;">    <title>HELLO异次元</title>
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' blob: file:; script-src 'self' 'unsafe-inline'; style-src 'self'; connect-src 'self' http:; img-src 'self' data: blob:; media-src 'self' blob: file:; font-src 'self' http://at.alicdn.com;">    <title>HELLO异次元</title> -->
     <link rel="stylesheet" href="index.css">
-    <!-- <link rel="stylesheet" href="public/css/style.css"> -->
     <link rel="stylesheet" href="public/css/iconfont.css">
 </head>
 <body>
@@ -29,10 +27,6 @@
                 <span class="iconfont icon-shequ-jihuo_"></span>
                 社区
             </button>
-            <!-- <button id="btn_to_heart">
-                <span class="iconfont icon-shoucang"></span>
-                收藏
-            </button> -->
             <button id="btn_to_album">
                 <span class="iconfont icon-xiangce"></span>
                 相册
@@ -72,6 +66,7 @@
             <iframe src="public/html/home.html" frameborder="0" id="home-content" class="location"></iframe>
         </div>
     </div>
+        <script src="global.js"></script>
     <script src="index.js"></script>
 </body>
 </html>

@@ -54,17 +54,18 @@ section{
 }
 section form{
     height: 150px;
-    width: 100%;
+    width: 80%;
+    left: 10%;
     top: 100px;
     z-index: 235;
-    position: sticky;
+    position: fixed;
 }
 section .commentForm{
     position: sticky;
     top: 0;
     display: none;
 }
-section header article{
+section header textarea{
     position: absolute;
     top: 0;
     left: 0;
@@ -175,4 +176,90 @@ section main div footer figure button{
 }
 .liked{
     color: skyblue;
+}
+
+.replies{
+    width: 100%;
+}
+.reply{
+    margin-left: 10% !important;
+}
+
+.reply a{
+    font-size: 12px;
+    color: #777 !important;
+}
+.reply img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+
+/*emotion*/
+.emoji-panel {
+  position: absolute;
+  top: 20%;
+  right: 0;
+  width: 100%;
+  max-width: 400px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  padding: 16px;
+  display: none;
+  z-index: 333;
+}
+
+.emoji-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.emoji-categories {
+  display: flex;
+  gap: 8px;
+}
+
+.category {
+  font-size: 20px;
+  padding: 4px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.category.active {
+  background: #f0f0f0;
+}
+
+.emoji-container {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+}
+
+.emoji-item {
+  font-size: 24px;
+  padding: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.emoji-item:hover {
+  background: #f0f0f0;
+}
+
+/* 显示动画 */
+.emoji-panel.show {
+  display: block;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
 }
